@@ -2,23 +2,24 @@ public class PivotIndex {
 
     public int pivotIndex(int[] nums) {
         // pivot index is the index in an array where the
-        // sum of all numbers left and all numbers right of it are equal, exclusive of itself
+        // sum of all the numbers left and all numbers right
+        // of it are equal, exclusive of itself
         // if there is no such index return -1
-        
 
-        // establish placeholders sum and leftsum at 0
+
+        // establish placeholder values
         int sum = 0, leftsum = 0;
 
-        // for int x loop through nums[] adding each number to the sum to get total
+        //  get the sum of all ints in the array
         for (int x : nums) sum += x;
 
-        // for i loop through nums[] and i++ increment
+        // loop through nums[] by length
         for (int i = 0; i < nums.length; i++) {
 
-            // during each iteration check if the previous totaled sum
-            // minus the leftsum (starts at 0) minus the current location in nums[]
-            // is equal to leftsum
-            // if it is return i because that's the answer
+            // during each loop iteration,
+            // check if the current leftsum is equal to the sum minus the leftsum
+            // (starts at 0) minus the current location in nums[]
+            // if it is, return i because that's the index of the solution
             if (leftsum == sum - leftsum - nums[i])
                 return i;
 
