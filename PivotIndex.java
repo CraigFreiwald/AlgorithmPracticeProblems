@@ -7,18 +7,18 @@ public class PivotIndex {
         // if there is no such index return -1
 
 
-        // establish placeholder values
+        // establishes placeholder values
         int sum = 0, leftsum = 0;
 
-        //  get the sum of all ints in the array
+        // gets the sum of all ints in the array
         for (int x : nums) sum += x;
 
-        // loop through nums[] by length
+        // loops through nums[] by length
         for (int i = 0; i < nums.length; i++) {
 
             // during each loop iteration,
-            // check if the current leftsum is equal to the sum minus the leftsum
-            // (starts at 0) minus the current location in nums[]
+            // checks if the current leftsum is equal to the sum minus the leftsum
+            // minus the current location in nums[]
             // if it is, return i because that's the index of the solution
             if (leftsum == sum - leftsum - nums[i])
                 return i;
