@@ -8,7 +8,8 @@ public class Main {
         PivotIndex pivotIn = new PivotIndex();
         int[] nums = {1, 7, 3, 6, 5, 6};
         int x = pivotIn.pivotIndex(nums);
-        System.out.println(x);
+        System.out.println("Expected answer: 3");
+        System.out.println("My answer is: " + x);
     }
 
 
